@@ -12,6 +12,13 @@ export function identifyVariable(variable) {
 
 }
 
+function identifyVariableTwo(variable) {
+   let holder = typeof variable;
+
+   return "{ type: '" + holder + "', value: " + variable + " }"
+
+}
+
 /**
  *
  * @param array
@@ -29,7 +36,7 @@ export function identifyArray(array) {
    let holder = [];
    let i =0;
    array.forEach(element => {
-      holder[i] = identifyVariable(array[i]);
+      holder[i] = identifyVariableTwo(array[i]);
       i++;
    });
    return holder;

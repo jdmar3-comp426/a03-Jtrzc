@@ -15,7 +15,7 @@ export function identifyVariable(variable) {
 function identifyVariableTwo(variable) {
    let holder = typeof variable;
 
-   return `{ type: ${holder} , value:  + ${variable} + }`
+   return `{ type: '${holder}' , value:  + ${variable} + }`
 
 }
 
@@ -59,7 +59,7 @@ export function identifyArray(array) {
  obj now does not contain the `password` field
  */
 export function removeKey(object, key) {
-
+   object.removeKey(key);
 }
 
 /**

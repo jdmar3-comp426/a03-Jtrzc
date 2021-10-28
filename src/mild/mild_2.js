@@ -81,8 +81,12 @@ export function removeKey(object, key) {
  */
 export function removeKeyNonDestructive(object, key) {
       const holder = {...object};
+      let arr = []
+
       delete holder[key];
-      return holder, object;
+      arr[0] = holder;
+      arr[1] = object;
+      return arr;
 }
 
 /**

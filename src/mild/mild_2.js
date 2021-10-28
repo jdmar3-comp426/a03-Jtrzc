@@ -82,7 +82,7 @@ export function removeKey(object, key) {
 export function removeKeyNonDestructive(object, key) {
       const holder = {...object};
       delete holder[key];
-      return holder;
+      return object + holder;
 }
 
 /**

@@ -15,7 +15,7 @@ export function identifyVariable(variable) {
 function identifyVariableTwo(variable) {
    let holder = typeof variable;
 
-   return "{ type: '" + holder + "', value: " + variable + " }"
+   return `{ type: ${holder} , value:  + ${variable} + }`
 
 }
 

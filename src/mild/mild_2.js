@@ -8,7 +8,7 @@
 export function identifyVariable(variable) {
       let holder = typeof variable;
 
-      return "type: '" + holder + "', value: '" + variable + "'"
+      return "{ type: '" + holder + "', value: '" + variable + "' }"
 
 }
 

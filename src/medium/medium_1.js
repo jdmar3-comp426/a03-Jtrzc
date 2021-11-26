@@ -55,9 +55,9 @@ export function getStatistics(array) {
     let Median = getMedian(array);
     let Maximum = Math.max(...array);
     let Minimum = Math.min(...array);
-    let Mean = arraySum / arrayLength;
-    let Variance = variance(array, arrayMean);
-    let StdDev = Math.sqrt(arrayVariance);
+    let Mean = Sum / Length;
+    let Variance = variance(array, Mean);
+    let StdDev = Math.sqrt(Variance);
     result = {
         length: Length,
         sum: Sum,

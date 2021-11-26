@@ -109,5 +109,5 @@ export function removeKeys(object, keyList) {
    for(var i =0; i < keyList.length; i++){
       delete holder[keyList[i]];
    }
-   return newobject;
+   return holder;
 }

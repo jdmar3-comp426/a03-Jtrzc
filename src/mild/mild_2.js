@@ -34,11 +34,9 @@ function identifyVariableTwo(variable) {
  */
 export function identifyArray(array) {
    let holder = [];
-   let i =0;
-   array.forEach(element => {
-      holder[i] = identifyVariableTwo(array[i]);
-      i++;
-   });
+   for(let i=0; i<array.length; i++){
+      holder.push({type: typeof(array[i]), value: array[i]})
+   }
    return holder;
 }
 
@@ -80,13 +78,9 @@ export function removeKey(object, key) {
  If only `removeKeyNonDestructive` was called, nothing would have changed.
  */
 export function removeKeyNonDestructive(object, key) {
-      const holder = {...object};
-      let arr = []
-
-      delete holder[key];
-      arr[1] = holder;
-      arr[0] = object;
-      return arr;
+      var newHolder = Object.assign({}, object);
+      delete newHolder[key];
+      return newHolder;
 }
 
 /**
@@ -111,14 +105,9 @@ export function removeKeyNonDestructive(object, key) {
  * @return {*} The object with its keys removed.
  */
 export function removeKeys(object, keyList) {
-   const holder = {...object};
-   let arr = []
-
-   for(let i = 0; i<keyList.length;i++){
+   var holder = Object.assign({}, object)
+   for(var i =0; i < keyList.length; i++){
       delete holder[keyList[i]];
    }
-   delete holder[key];
-   arr[1] = holder;
-   arr[0] = object;
-   return arr;
+   return newobject;
 }

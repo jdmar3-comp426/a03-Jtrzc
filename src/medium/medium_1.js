@@ -26,7 +26,7 @@ export function getSum(array) {
  * console.log(getMedian(array)); // 4.5
  */
 export function getMedian(array) {
-   
+  
 }
 
 /**
@@ -49,6 +49,25 @@ export function getMedian(array) {
  }
  */
 export function getStatistics(array) {
-    
+    let result = {};
+    let Length = array.length;
+    let Sum = getSum(array);
+    let Median = getMedian(array);
+    let Maximum = Math.max(...array);
+    let Minimum = Math.min(...array);
+    let Mean = arraySum / arrayLength;
+    let Variance = variance(array, arrayMean);
+    let StdDev = Math.sqrt(arrayVariance);
+    result = {
+        length: Length,
+        sum: Sum,
+        mean: Mean,
+        median: Median,
+        min: Minimum,
+        max: Maximum,
+        variance: Variance,
+        standard_deviation: StdDev
+    };
+    return result;
 }
 

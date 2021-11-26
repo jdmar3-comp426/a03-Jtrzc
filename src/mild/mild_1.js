@@ -42,6 +42,7 @@ export function maxAndMin(numbers) {
     return {
         max: Math.max(...numbers),
         min: Math.min(...numbers)
+        //done
     }
 }
 

@@ -19,10 +19,34 @@ see under the methods section
  *
  * @param {allCarStats.ratioHybrids} ratio of cars that are hybrids
  */
+function averageMPG(){
+    var city, highway = 0;
+    for (var i = 0; i < mpg_data.length; i++){
+        city += mpg_data[i][`city_mpg`];
+        highway += mpg_data[i][`highway_mpg`];
+    }
+    city = city / mpg_data.length;
+    highway = highway / mpg_data.length;
+    return {city: city, highway: highway};
+}
+
+function allStats(){
+
+}
+
+function hybridRatio(){
+
+}
+
+
+
+
+
+
 export const allCarStats = {
-    avgMpg: undefined,
-    allYearStats: undefined,
-    ratioHybrids: undefined,
+    avgMpg: averageMPG(),
+    allYearStats: allStats(),
+    ratioHybrids: hybridRatio(),
 };
 
 

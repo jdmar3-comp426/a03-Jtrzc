@@ -43,6 +43,7 @@ export function maxAndMin(numbers) {
         max: Math.max(...numbers),
         min: Math.min(...numbers)
         //done
+        //autograder test
     }
 }
 
